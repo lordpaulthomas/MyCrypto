@@ -4,7 +4,7 @@
   width: 100vw;
   height: 100vh;
   margin: auto;
-  font-size: 45px;
+  font-size: 2.5rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background: url("https://pixabay.com/get/55e4d1454f57ab14f6da8c7dda79367d1636dde651516c4870277fd1974fc55fbb_1280.jpg");
 
@@ -13,14 +13,14 @@
   
 }
 button{
-  height: 50px;
-  width: 300px;
+  text-align: center;
+  padding: 1.2rem;
   color: #bdd7ea;
   background-color: #493b27;
   border: black solid 3px;
   box-shadow: black 13px 13px 13px;
-  margin-top: 5rem;
-  font-size: 35px;
+
+
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 button:hover{
@@ -28,20 +28,19 @@ button:hover{
   color: 	#1a405c;
 }
 #title{
+  font-size: 4rem;
   background-color: black;
   padding: 2rem;
   color: white;
   margin: 0px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
-p{
-  margin: 1rem;
-}
+
 table{
+
   margin: auto;
   background-color: white;
   border: black solid 3px;
   box-shadow: black 13px 13px 13px;
-  padding: 5px;
-  margin-top: 5rem;
+
 }
