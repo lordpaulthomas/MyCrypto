@@ -38,7 +38,7 @@ class Prices extends Component {
     const nfObject = new Intl.NumberFormat('en-US');
 
     return (
-      <div className="box">
+      <div >
         <div style={{height: '100vh'}}>
           <div className="box" style={{height: '100vh'}}>
             <h1 id="title">MyCrypto</h1>
