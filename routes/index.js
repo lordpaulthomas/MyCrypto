@@ -1,3 +1,6 @@
 const router = require("express").Router();
+const findPriceController = require("./../controllers/findPriceController")
+router.route("/price")
+  .get(findPriceController.find);
 
-router.route("/contectInfo")
+module.exports = router;
