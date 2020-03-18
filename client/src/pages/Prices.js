@@ -27,27 +27,45 @@ class Prices extends Component {
   };
 
   render() {
-  const nfObject = new Intl.NumberFormat('en-US'); 
+    const nfObject = new Intl.NumberFormat('en-US');
 
     return (
       <div className="App" style={{height: '100vh'}}>
         <div className="box">
-          <h1 id="title">MyCrypto</h1>
-          <button onClick={this.submit}>Refresh</button>
-          <p>Bitcoin: {nfObject.format(Math.round(100 * this.state.bitcoin) / 100)}</p>
-          <p>Ether: {nfObject.format(Math.round(100 * this.state.ether) / 100)}</p>
-          <p>Ripple: {nfObject.format(Math.round(100 * this.state.ripple) / 100)}</p>
-          <p>Litecoin: {nfObject.format(Math.round(100 * this.state.litecoin) / 100)}</p>
-          <p>
-            Total Value:
-            {nfObject.format(Math.round(
-              100 *
-                (this.state.bitcoin * 1.259 +
-                  this.state.ether * 33.259 +
-                  this.state.ripple * 3000 +
-                  this.state.litecoin * 76.3138)
-            ) / 100)}
-          </p>
+          <div id="content">
+            <h1 id="title">MyCrypto</h1>
+            <button onClick={this.submit}>Refresh</button>
+            <table>
+              <tr>
+                Bitcoin:
+                {nfObject.format(Math.round(100 * this.state.bitcoin) / 100)}
+              </tr>
+              <tr>
+                Ether:{' '}
+                {nfObject.format(Math.round(100 * this.state.ether) / 100)}
+              </tr>
+              <tr>
+                Ripple:
+                {nfObject.format(Math.round(100 * this.state.ripple) / 100)}
+              </tr>
+              <tr>
+                Litecoin:
+                {nfObject.format(Math.round(100 * this.state.litecoin) / 100)}
+              </tr>
+              <tr>
+                Total Value:
+                {nfObject.format(
+                  Math.round(
+                    100 *
+                      (this.state.bitcoin * 1.259 +
+                        this.state.ether * 33.259 +
+                        this.state.ripple * 3000 +
+                        this.state.litecoin * 76.3138)
+                  ) / 100
+                )}
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
     );
