@@ -10,8 +10,6 @@ class Prices extends Component {
     litecoin: 0,
     eos: 0,
     stellar: 0,
-    cardano: 0,
-    tron: 0,
     search: '',
   };
 
@@ -26,8 +24,6 @@ class Prices extends Component {
           litecoin: res.data.data[5].quote.USD.price,
           eos: res.data.data[7].quote.USD.price,
           stellar: res.data.data[11].quote.USD.price,
-          cardano: res.data.data[13].quote.USD.price,
-          tron: res.data.data[14].quote.USD.price
         });
         console.log(res.data.data);
       })
@@ -71,18 +67,7 @@ class Prices extends Component {
                     Math.round(1000 * this.state.stellar) / 1000
                   )}
                 </tr>
-                <tr>
-                  Cardano:
-                  {nfObject.format(
-                    Math.round(1000 * this.state.cardano) / 1000
-                  )}
-                </tr>
-                <tr>
-                  Tron:
-                  {nfObject.format(
-                    Math.round(1000 * this.state.tron) / 1000
-                  )}
-                </tr>
+            
                 <tr>
                   Total Value:
                   {nfObject.format(
@@ -93,9 +78,7 @@ class Prices extends Component {
                           this.state.ripple * 3000 +
                           this.state.litecoin * 76.3138 +
                           this.state.eos * 240 +
-                          this.state.stellar * 69376.487 +
-                          this.state.cardano * 28743.3678 + 
-                          this.state.tron * 31810)
+                          this.state.stellar * 69376.487)
                     ) / 100
                   )}
                 </tr>
