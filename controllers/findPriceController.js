@@ -2,8 +2,6 @@ const axios = require('axios');
 
 module.exports = {
   find: function (req, res) {
-
-    console.log("hit");
     axios.get("https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest",
     {
       headers: {
@@ -11,7 +9,6 @@ module.exports = {
       }
     })
       .then(function (response){
-        console.log(response);
         res.json(response.data)
         
       })

@@ -1,0 +1,35 @@
+div{
+  text-align: center;
+  position: absolute;
+  width: 100vw;
+  margin: auto;
+  font-size: 45px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: aqua;
+
+}
+button{
+  height: 50px;
+  width: 300px;
+  color: #bdd7ea;
+  background-color: #493b27;
+  font-size: 35px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+button:hover{
+  background-color: #bdd7ea;
+  color: 	#1a405c;
+}
+#title{
+  color: "black";
+  margin: 0px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+p{
+  margin: 1rem;
+}
+.box{
+  position: relative;
+  margin: auto;
+
+}
