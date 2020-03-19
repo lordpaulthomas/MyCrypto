@@ -1,17 +1,4 @@
-.box{
-  text-align: center;
-  position: absolute;
-  width: 100vw;
 
-  margin: auto;
-  /* font-size: 2.5rem; */
-  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
-  background: url("https://pixabay.com/get/55e4d1454f57ab14f6da8c7dda79367d1636dde651516c4870277fd1974fc55fbb_1280.jpg");
-
-  background-position: center;
-  background-size: fill;
-  
-}
 button{
   text-align: center;
   padding: 1.2rem;
@@ -34,18 +21,4 @@ button:hover{
   color: white;
   margin: 0px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
-}
-
-table{
-
-  margin: auto;
-  background-color: white;
-  padding-top: 210px;
-  border: black solid 3px;
-  box-shadow: black 13px 13px 13px;
-
-}
-tr{
-  border: black solid 2px;
-  padding: 12px;
 }
