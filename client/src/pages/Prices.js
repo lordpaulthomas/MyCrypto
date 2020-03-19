@@ -39,49 +39,23 @@ class Prices extends Component {
           <div className="box" style={{height: '100vh'}}>
             <h1 id="title">MyCrypto</h1>
             <button onClick={this.submit}>Refresh</button>
-            <table>
+            <table style={{marginTop: "2rem"}}>
               <tbody>
-                <tr>
-                  Bitcoin:
-                  {nfObject.format(Math.round(100 * this.state.bitcoin) / 100)}
-                </tr>
-                <tr>
-                  Ether:{' '}
-                  {nfObject.format(Math.round(100 * this.state.ether) / 100)}
-                </tr>
-                <tr>
-                  Ripple:
-                  {nfObject.format(Math.round(1000 * this.state.ripple) / 1000)}
-                </tr>
-                <tr>
-                  Litecoin:
-                  {nfObject.format(Math.round(100 * this.state.litecoin) / 100)}
-                </tr>
-                <tr>
-                  EOS:
-                  {nfObject.format(Math.round(100 * this.state.eos) / 100)}
-                </tr>
-                <tr>
-                  Stellar:
-                  {nfObject.format(
-                    Math.round(1000 * this.state.stellar) / 1000
-                  )}
-                </tr>
-            
-                <tr>
-                  Total Value:
-                  {nfObject.format(
-                    Math.round(
-                      100 *
-                        (this.state.bitcoin * 1.259 +
-                          this.state.ether * 33.259 +
-                          this.state.ripple * 3000 +
-                          this.state.litecoin * 76.3138 +
-                          this.state.eos * 240 +
-                          this.state.stellar * 69376.487)
-                    ) / 100
-                  )}
-                </tr>
+              {
+                this.state.results.map(coin => {
+                  if(coin.symbol === "BTC" || coin.symbol === "ETH"
+                  || coin.symbol === "XRP" || coin.symbol === "XLM"
+                  || coin.symbol === "NEO" || coin.symbol === "ADA"
+                  || coin.symbol === "XMR" || coin.symbol === "ARDR"
+                  || coin.symbol === "REP" || coin.symbol === "XVG"
+                  || coin.symbol === "WAVES" || coin.symbol === "XEM"
+                  || coin.symbol === "LTC" || coin.symbol === "GNT"){
+                  return(
+                  <tr>{coin.name} - ${nfObject.format(coin.quote.USD.price)} <td>% {coin.quote.USD.percent_change_24h}</td></tr>
+                  )
+                  }
+                })
+              }
               </tbody>
             </table>
           </div>
