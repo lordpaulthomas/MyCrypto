@@ -1,5 +1,5 @@
 
-button{
+/* button{
   text-align: center;
   padding: 1.2rem;
   color: #bdd7ea;
@@ -13,7 +13,7 @@ button{
 button:hover{
   background-color: #bdd7ea;
   color: 	#1a405c;
-}
+} */
 #title{
   font-size: 4rem;
   background-color: black;
@@ -21,4 +21,7 @@ button:hover{
   color: white;
   margin: 0px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+*{
+  font-family: 'Noto Sans SC', sans-serif;
 }

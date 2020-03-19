@@ -8,7 +8,7 @@ const InfoBar = props => {
       <div className="row pt-2 pb-2 border border-light">
         <td className="col-4">{props.name}</td>
 
-        <div className="col-4">
+        <div className="col-4 text-center">
           <td className="row ">
             ${nfObject.format(props.price)}
           </td>
@@ -26,7 +26,7 @@ const InfoBar = props => {
             </small>
           </td>
         </div>
-        <div className="col-4">
+        <div className="col-4 text-center">
           <td className="row">
             ${nfObject.format(props.price * props.amount)}
           </td>

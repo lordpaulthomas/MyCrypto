@@ -26,11 +26,13 @@ class Prices extends Component {
   };
 
   render() {
+    let total = 0; 
+    console.log(total);
     const nfObject = new Intl.NumberFormat('en-US');
     return (
-      <div>
-        <div className="text-center">
-          <div className="container">
+      <div className="container">
+        <div className="text-center border border-secondary">
+          <div >
             <h1 id="title">MyCrypto</h1>
             <button className="btn btn-warning mt-2 mb-2" onClick={this.submit}>
               Refresh
@@ -39,6 +41,7 @@ class Prices extends Component {
               <tbody>
                 {this.state.results.map(coin => {
                   if (coin.symbol === 'BTC') {
+                    total += this.state.bitcoin * coin.quote.USD.price;
                     return (
                       <InfoBar
                         name={coin.name}
@@ -48,6 +51,7 @@ class Prices extends Component {
                       />
                     );
                   } else if (coin.symbol === 'ETH') {
+                    total += this.state.ether * coin.quote.USD.price;
                     return (
                       <InfoBar
                         name={coin.name}
@@ -57,6 +61,7 @@ class Prices extends Component {
                       />
                     );
                   } else if (coin.symbol === 'XRP') {
+                    total += this.state.ripple * coin.quote.USD.price;
                     return (
                       <InfoBar
                         name={coin.name}
@@ -66,6 +71,7 @@ class Prices extends Component {
                       />
                     );
                   } else if (coin.symbol === 'LTC') {
+                    total += this.state.litecoin * coin.quote.USD.price;
                     return(
                       <InfoBar
                       name={coin.name}
@@ -75,6 +81,7 @@ class Prices extends Component {
                     />
                     )
                   } else if (coin.symbol === 'EOS') {
+                    total += this.state.eos * coin.quote.USD.price;
                     return(
                       <InfoBar
                       name={coin.name}
@@ -84,6 +91,7 @@ class Prices extends Component {
                     />
                     )
                   } else if (coin.symbol === 'XLM'){
+                    total += this.state.stellar * coin.quote.USD.price;
                     return(
                       <InfoBar
                       name={coin.name}
@@ -96,6 +104,9 @@ class Prices extends Component {
                 })}
               </tbody>
             </table>
+           <div>
+             <h2  style={{marginTop: "2rem"}}> Total Value:  ${nfObject.format(total)}</h2>
+           </div>
           </div>
         </div>
       </div>
