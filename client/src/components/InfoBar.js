@@ -1,7 +1,5 @@
 import React from 'react';
-
 const InfoBar = props => {
-  
   const nfObject = new Intl.NumberFormat('en-US');
   return (
     <tr className="container">
@@ -22,7 +20,7 @@ const InfoBar = props => {
             }}
           >
             <small>
-              %{props.change}
+              {props.change}%
             </small>
           </td>
         </div>
